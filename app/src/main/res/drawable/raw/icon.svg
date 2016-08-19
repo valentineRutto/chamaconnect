@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+ <!--Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:svg="htp://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -109,7 +109,7 @@
          transform="matrix(0.72363199,0,0,0.70265766,102.91608,90.956387)" />
       <path
          style="display:inline;fill:none;fill-rule:evenodd;stroke:#2ecc71;stroke-width:21.74778175;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 546.01573,194.31022 151.12708,327.55696"
+         id="M 546.01573,194.31022 151.12708,327.55696"
          id="path4171-4-8-5-3"
          inkscape:connector-curvature="0"
          transform="matrix(0.72363199,0,0,0.70265766,102.91608,90.956387)" />
@@ -132,3 +132,4 @@
     </g>
   </g>
 </svg>
+

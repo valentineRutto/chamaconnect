@@ -55,6 +55,7 @@ public class LoanCalcultorActivity extends AppCompatActivity {
 
                                                        Toast.makeText(getApplicationContext(),"Your call has failed...",
 
+
                                                                Toast.LENGTH_LONG).show();
 
                                                        e.printStackTrace();
