@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
 import java.util.ArrayList;
 
 import butterknife.ButterKnife;
@@ -23,21 +22,13 @@ import butterknife.InjectView;
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 
-    @InjectView(R.id.input_name)
-    EditText _nameText;
-    @InjectView(R.id.phone) EditText _phone;
-    @InjectView(R.id.certificate) EditText _certificate;
-    @InjectView(R.id.agreementdoc) EditText _agreement;
-    @InjectView(R.id.constitution) EditText _constitution;
+    @InjectView(R.id.input_name) EditText _nameText;
+    @InjectView(R.id.input_email) EditText _emailText;
+    @InjectView(R.id.input_password) EditText _passwordText;
     @InjectView(R.id.btn_signup) Button _signupButton;
-    @InjectView(R.id.btn_cert) Button _certButton;
-    @InjectView(R.id.btn_agdoc) Button _agdocButton;
-    @InjectView(R.id.btn_const) Button _constButton;
-    @InjectView(R.id.link_login)
-    TextView _loginLink;
-//    EditText certificate;
-//    EditText _agreement;
-   Context mContext = SignupActivity.this;
+    @InjectView(R.id.link_login) TextView _loginLink;
+
+    Context mContext = SignupActivity.this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
