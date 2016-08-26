@@ -14,8 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -35,43 +33,6 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         ButterKnife.inject(this);
 
-
-        _certButton.setOnClickListener(new View.OnClickListener() {
-            String mChosenDir;
-
-            @Override
-            public void onClick(View v) {
-                SimpleFileChooserDialog myDialog = new SimpleFileChooserDialog(mContext, SimpleFileChooserDialog.FILE_SAVE, new SimpleFileChooserDialog.SimpleFileDialogListener() {
-                    @Override
-                    public void onPositiveButton(String chosenDir) {
-                        _certificate.setText(chosenDir);
-                        Toast.makeText(mContext, "Path to save file: " + chosenDir, Toast.LENGTH_LONG).show();
-                    }
-                });
-                ArrayList<String> myExts = new ArrayList<>();
-                myExts.add(".jpg");
-                myExts.add(".jpeg");
-                myExts.add(".png");
-                myDialog.mAllowedFileExtsList = myExts;
-                myDialog.chooseFile_or_Dir();
-            }
-        });
-
-       _agdocButton.setOnClickListener(new View.OnClickListener() {
-            String mChosenDir;
-
-            @Override
-            public void onClick(View v) {
-                SimpleFileChooserDialog myDialog = new SimpleFileChooserDialog(SignupActivity.this, SimpleFileChooserDialog.FOLDER_SELECT, new SimpleFileChooserDialog.SimpleFileDialogListener() {
-                    @Override
-                    public void onPositiveButton(String chosenDir) {
-                       _agreement.setText(chosenDir);
-                        Toast.makeText(mContext, "ChosenDir: " + chosenDir, Toast.LENGTH_SHORT).show();
-                    }
-                });
-                myDialog.chooseFile_or_Dir();
-            }
-        });
 
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,8 +74,8 @@ public class SignupActivity extends AppCompatActivity {
         progressDialog.show();
 
         String name = _nameText.getText().toString();
-        String phone = _phone.getText().toString();
-        String certificate = _certificate.getText().toString();
+        String email = _emailText.getText().toString();
+        String password = _passwordText.getText().toString();
 
         // TODO: Implement your own signup logic here.
 
@@ -143,38 +104,6 @@ public class SignupActivity extends AppCompatActivity {
         _signupButton.setEnabled(true);
     }
 
-//    public boolean validate() {
-//        boolean valid = true;
-//
-//        String name = _nameText.getText().toString();
-//        String phone = _phone.getText().toString();
-//        String certificate = _certificate.getText().toString();
-//
-//        if (name.isEmpty() || name.length() < 3) {
-//            _nameText.setError("at least 3 characters");
-//            valid = false;
-//        } else {
-//            _nameText.setError(null);
-//        }
-//
-//        if (phone.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(phone).matches()) {
-//            _phone.setError("enter a valid email address");
-//            valid = false;
-//        } else {
-//            _phone.setError(null);
-//        }
-//
-//        if (certificate.isEmpty() || certificate.length() < 4 || certificate.length() > 10) {
-//            _certificate.setError("between 4 and 10 alphanumeric characters");
-//            valid = false;
-//        } else {
-//            _certificate.setError(null);
-//        }
-//
-//        return valid;
-//
-//
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
